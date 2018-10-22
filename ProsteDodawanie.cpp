@@ -1,25 +1,19 @@
 #include <iostream>
-#include <vector>
 
-using namespace std;
+int avgSpeed(int num, int num2)
+{
+	return (2 * num*num2) / (num + num2);
+}
 
 int main()
 {
-	int liczbaTestow, liczbaCyfr, temp;
-	cin >> liczbaTestow;
+	int testCases, input, input2;
+	std::cin >> testCases;
 
-	for (int i = 0; i < liczbaTestow; i++)
+	for (int i=0; i<testCases; ++i)
 	{
-		int wynik = 0;
-		cin >> liczbaCyfr;
-		vector<int> liczby;
-		for (int j = 0; j < liczbaCyfr; j++)
-		{
-			cin >> temp;
-			liczby.push_back(temp);
-			wynik += liczby[j];
-		}
-		cout << wynik << endl;
+		std::cin >> input >> input2;
+		std::cout << avgSpeed(input, input2) << std::endl;
 	}
-	return 0;
+return 0;
 }
